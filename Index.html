@@ -1,43 +1,96 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal de Noticias</title>
-    <link rel="stylesheet" type="text/css" href="Styles/Layout.css">
+    <title>Lorem Ipsum</title>
+    <link rel="stylesheet" type="text/css" href="Styles/layout.css">
     <link rel="stylesheet" type="text/css" href="Styles/index.css">
+    <link rel="stylesheet" type="text/css" href="Styles/menu.css">
     <link rel="stylesheet" type="text/css" href="Styles/slideshow.css">
 </head>
 
 <body>
-    <div class="content">
-        <header class="top">
-            <div class="logo"></div>
-            <nav class="navbar">
-                <span class="navlogo">MENU</span>
-                <a href="#" class="menu">Menu</a>
-                <a href="#" class="menu">Menu</a>
-                <a href="#" class="menu">Menu</a>
-                <a href="#" class="menu">Menu</a>
-                <a href="#" class="menu">Menu</a>
-                <a href="#" class="menu">Menu</a>
-                <a href="#" class="menu">Menu</a>
-                <a href="#" class="menu">Menu</a>
-                <a href="#" class="menu">Menu</a>
-            </nav>
-            <nav class="navbar">
-                <span class="navlogo">MENU</span>
-                <a href="#" class="menu">Menu</a>
-                <a href="#" class="menu">Menu</a>
-                <a href="#" class="menu">Menu</a>
-                <a href="#" class="menu">Menu</a>
-                <a href="#" class="menu">Menu</a>
-                <a href="#" class="menu">Menu</a>
-                <a href="#" class="menu">Menu</a>
-            </nav>
-        </header>
+    <header class="top">
+        <div class="logo"></div>
+        <nav class="navbar">
+            <ul class="navbar-menu">
 
+                <div class="navlogo" onclick="openSubMenu()">
+                    <div>
+                        <div class="navlogo-0">
+                            <div class="navlogo-1"></div>
+                            <div class="navlogo-2"></div>
+                            <div class="navlogo-3"></div>
+                        </div>
+                        <span class="navlogo-menu">MENU</span>
+                    </div>
+                </div>
+                <a href="#" class="menu" onmouseout="closeMenu()">
+                    <li>News</li>
+                </a>
+                <a href="#" class="menu" onmouseout="closeMenu()">
+                    <li>Latest</li>
+                </a>
+                <a href="#" class="menu" onmouseout="closeMenu()">
+                    <li>About Us</li>
+                </a>
+                <a href="#" class="menu" onmouseout="closeMenu()">
+                    <li>Contact Us</li>
+                </a>
+                <a href="#" class="menu" onmouseout="closeMenu()">
+                    <li>Work With Us</li>
+                </a>
+                <a href="#" class="menu" onmouseout="closeMenu()">
+                    <li>Library</li>
+                </a>
+                <a href="#" class="menu" onmouseout="closeMenu()">
+                    <li>Store</li>
+                </a>
+                <a href="#" class="menu" onmouseout="closeMenu()">
+                    <li>Forum</li>
+                </a>
+            </ul>
+        </nav>
+        <nav class="sub-navbar">
+            <ul class="sub-navbar-menu">
+                <a href="#">
+                    <li class="menu" onmouseover="openOneNav()">Economy</li>
+                </a>
+                <a href="#">
+                    <li class="menu" onmouseover="closeOneNav()">Tech</li>
+                </a>
+                <a href="#">
+                    <li class="menu" onmouseover="closeOneNav()">Sport</li>
+                </a>
+                <a href="#">
+                    <li class="menu" onmouseover="closeOneNav()">Entertainment</li>
+                </a>
+                <a href="#">
+                    <li class="menu" onmouseover="closeOneNav()">Culture</li>
+                </a>
+            </ul>
+        </nav>
+        <nav class="one-navbar">
+            <ul class="one-navbar-menu">
+                <a href="#">
+                    <li class="one-menu" onmouseover="closeOneSubNav()">World</li>
+                </a>
+                <a href="#" onmouseover="openOneSubNav()">
+                    <li class="one-menu">South America</li>
+                </a>
+            </ul>
+        </nav>
+        <nav class="one-sub-navbar">
+            <ul class="one-sub-navbar-menu" onmouseout="closeOneSubNav()">
+                <a href="#">
+                    <li class="one-menu">Brazil</li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+    <div class="content" onmousemove="closeMenu()">
         <section class="news">
             <section class="first-content">
                 <div class="first-padding">
@@ -86,7 +139,7 @@
                 </div>
                 <br>
                 <section class="slideshow">
-                    <button class="left-button" onclick="move('#slide1')">&#10094;</button>
+                    <button class="left-button" onclick="move( '#slide1')">&#10094;</button>
 
                     <div class="slide" id="slide1">
                         <div class="third-padding">
@@ -148,7 +201,7 @@
                         </div>
                     </div>
 
-                    <button class="right-button" onclick="move('#slide1')">&#10095;</button>
+                    <button class="right-button" onclick="move( '#slide1')">&#10095;</button>
                 </section>
             </section>
         </section>
@@ -296,7 +349,7 @@
                 </div>
                 <br>
                 <section class="slideshow">
-                    <button class="left-button" onclick="move('#slide2')">&#10094;</button>
+                    <button class="left-button" onclick="move( '#slide2')">&#10094;</button>
 
                     <div class="slide" id="slide2">
                         <div class="third-padding">
@@ -358,7 +411,7 @@
                         </div>
                     </div>
 
-                    <button class="right-button" onclick="move('#slide2')">&#10095;</button>
+                    <button class="right-button" onclick="move( '#slide2')">&#10095;</button>
                 </section>
             </section>
         </section>
@@ -458,19 +511,20 @@
             </section>
         </section>
 
+        <script src="Scripts/menu.js"></script>
         <script src="Scripts/slideshow.js"></script>
         <footer class="footer">
             <div class="footer-logo"></div>
 
             <nav class="footer-navbar">
-                <a href="#" class="menu">Quem Somos</a>
-                <a href="#" class="menu">Fale Conosco</a>
-                <a href="#" class="menu">Trabalhe Conosco</a>
-                <a href="#" class="menu">Condições de Uso</a>
-                <a href="#" class="menu">Política de Privacidade</a>
+                <a href="#" class="footer-menu">About Us</a>
+                <a href="#" class="footer-menu">Contact Us</a>
+                <a href="#" class="footer-menu">Work With Us</a>
+                <a href="#" class="footer-menu">Terms of Usse</a>
+                <a href="#" class="footer-menu">Privacy Policy</a>
             </nav>
 
-            <p class="footer-copyright">COPYRIGHT © 2020 SITE.COM. TODOS OS DIREITOS RESERVADOS. LOREM IPSUM É UMA MARCA REGISTRADA DO LOREM IPSUM LTDA.</p>
+            <p class="footer-copyright">COPYRIGHT © 2020 SITE.COM. ALL RIGHTS RESERVED. LOREM IPSUM IS A REGISTERED TRADEMARK OF LOREM IPSUM LTDA.</p>
         </footer>
     </div>
 </body>
