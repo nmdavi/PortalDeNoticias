@@ -1,8 +1,4 @@
 # PortalDeNoticias
-É a página inicial de um portal de notícias, feito em HTML, CSS e JavaScript.
-
-Contato: davimendonca@protonmail.com
-
-LinkedIn: www.linkedin.com/in/davi-mendonca
+It is the home page of a news portal, made in HTML, CSS and JavaScript.
 
 ![Portal de Noticias](https://github.com/NMDavi/PortalDeNoticias/blob/master/PortalDeNoticias.png)
